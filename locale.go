@@ -19,7 +19,7 @@ type (
 )
 
 var (
-	ErrLangNotFound = errors.New("lang code not found in loaded langMap")
+	ErrDefaultLangNotSet = errors.New("default lang not set")
 )
 
 // Locale provides methods to access the lang map KV.
@@ -31,6 +31,10 @@ type Locale struct {
 
 // NewLocale validates the lang map and returns a new instance of Locale.
 func NewLocale(langMap LangMap, defaultLang string) (*Locale, error) {
+	if len(langMap) != 0 {
+		return nil, ErrDefaultLangNotSet
+	}
+
 	baseTmpl, err := parseAndLoadTemplates(langMap)
 	if err != nil {
 		return nil, err
@@ -52,7 +56,7 @@ func (l *Locale) Render(tmplKey string, langCode string, payload TemplatePayload
 		}
 
 		return buf.String(), nil
-	} else {
-		return "", ErrLangNotFound
 	}
+
+	return "", nil
 }
