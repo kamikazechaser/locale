@@ -8,10 +8,7 @@ Provides a _simple_ and _flexible_ way to render your translations. You are not 
 
 ## Install:
 
-```
-go get github.com/kamikazechaser/locale
-
-```
+`go get github.com/kamikazechaser/locale`
 
 ## Example
 
