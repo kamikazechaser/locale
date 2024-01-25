@@ -4,6 +4,8 @@
 
 [![Go Reference](https://pkg.go.dev/badge/github.com/kamikazechaser/locale.svg)](https://pkg.go.dev/github.com/kamikazechaser/locale)
 
+Provides a simple and flexible way to render your translations. API is highly inspired by https://github.com/kataras/i18n.
+
 ## Install:
 
 ```
@@ -66,3 +68,5 @@ For more info, See the Go package reference.
 ## License
 
 The Unlicense.
+
+## Credits
