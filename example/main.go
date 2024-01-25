@@ -27,12 +27,12 @@ func main() {
 		"Sohail",
 	}
 
-	eR, err := l.Render("hello", "eng", payload)
+	eR, err := l.Render("hello", locale.WithPayload(payload))
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	sR, err := l.Render("hello", "swa", payload)
+	sR, err := l.Render("hello", locale.WithLangCode("swa"), locale.WithPayload(payload))
 	if err != nil {
 		log.Fatal(err)
 	}
