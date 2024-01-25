@@ -1,3 +1,19 @@
+# locale
+
+> Simple locale template rendering using KV maps only
+
+[![Go Reference](https://pkg.go.dev/badge/github.com/kamikazechaser/locale.svg)](https://pkg.go.dev/github.com/kamikazechaser/locale)
+
+## Install:
+
+```
+go get github.com/kamikazechaser/locale
+
+```
+
+## Example
+
+```go
 package main
 
 import (
@@ -42,3 +58,11 @@ func main() {
 	log.Println(eR)
 	log.Println(sR)
 }
+
+```
+
+For more info, See the Go package reference.
+
+## License
+
+The Unlicense.
